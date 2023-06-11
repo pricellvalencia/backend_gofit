@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(InstrukturTableSeeder::class);
         $this->call(JadwalDefaultTableSeeder::class);
         $this->call(JadwalHarianTableSeeder::class);
-        $this->call(IzinInstrukturTableSeeder::class);
+        $this->call(IjinInstrukturTableSeeder::class);
         $this->call(MemberTableSeeder::class);
         $this->call(PresensiInstrukturTableSeeder::class);
         $this->call(PresensiMemberGymTableSeeder::class);
