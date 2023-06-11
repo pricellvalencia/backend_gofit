@@ -156,7 +156,7 @@ class LaporanController extends Controller
             ->leftJoinSub($subQueryPeserta, 'sub_peserta', function ($join) {
                 $join->on('jadwal_harian.ID_JADWAL_HARIAN', '=', 'sub_peserta.ID_JADWAL_HARIAN');
             })
-            ->selectRaw('kelas.NAMA_KELAS, kelas.ID_KELAS, instruktur.NAMA_INSTRUKTUR, jadwal_harian.ID_INSTRUKTUR, COUNT(sub_peserta.ID_JADWAL_HARIAN) AS jumlah_peserta')
+            ->selectRaw('kelas.NAMA_KELAS, kelas.ID_KELAS, instruktur.NAMA_INSTRUKTUR, jadwal_harian.ID_INSTRUKTUR, COUNT(sub_peserta.ID_PRESENSI_KELAS) AS jumlah_peserta')
             ->groupBy('kelas.NAMA_KELAS', 'kelas.ID_KELAS', 'instruktur.NAMA_INSTRUKTUR', 'jadwal_harian.ID_INSTRUKTUR')
             ->get();
 
