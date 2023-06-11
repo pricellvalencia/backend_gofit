@@ -79,12 +79,12 @@ class PresensiInstrukturController extends Controller
                 return response([
                     'message' => 'Belum waktunya kelas[!]',
                     'data' => ['Waktu: ' => $jadwal->TANGGAL]
-                ], 400);
+                ], 401);
             } else if($now > $end_time_timestamp) {
                 return response([
                     'message' => 'Sudah melewati waktunya kelas[!]',
                     'data' => ['Harus mulai sebelum' => $end_time_timestamp, 'now' => $now]
-                ], 400);
+                ], 402);
             } else {
                 $presensi_instruktur->WAKTU_MULAI_KELAS = $now;
                 $presensi_instruktur->save();
@@ -105,12 +105,12 @@ class PresensiInstrukturController extends Controller
             return response([
                 'message' => 'Kelas sedang berlangsung',
                 'data' => $presensi_instruktur
-            ], 400);
+            ], 403);
         } else {
             return response([
                 'message' => 'Kelas sudah selesai',
                 'data' => $presensi_instruktur
-            ], 400);
+            ], 404);
         }
     }
 
@@ -132,7 +132,7 @@ class PresensiInstrukturController extends Controller
             return response([
                 'message' => 'Kelas belum dimulai',
                 'data' => $presensi_instruktur
-            ], 400);
+            ], 401);
         } else if($presensi_instruktur->WAKTU_MULAI_KELAS != NULL && $presensi_instruktur->WAKTU_SELESAI_KELAS == NULL) {
             $start = new DateTime($presensi_instruktur->WAKTU_MULAI_KELAS);
             $end = new DateTime($presensi_instruktur->WAKTU_SELESAI_KELAS);
@@ -171,7 +171,7 @@ class PresensiInstrukturController extends Controller
             return response([
                 'message' => 'Kelas sudah selesai',
                 'data' => $presensi_instruktur
-            ], 400);
+            ], 402);
         }
     }
 }
