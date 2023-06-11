@@ -90,10 +90,10 @@ class PresensiKelasController extends Controller
     }
 
     // mempresensi member kelas yang hadir
-    public function presensiHadir(Request $request)
+    public function presensiHadir(Request $request, $kelas, $member)
     {
-        $kelas = $request->input('ID_JADWAL_HARIAN');
-        $member = $request->input('ID_MEMBER');
+        // $kelas = $request->input('ID_JADWAL_HARIAN');
+        // $member = $request->input('ID_MEMBER');
 
         // mempresensi member
         $presensi = DB::table('presensi_member_kelas')
@@ -174,10 +174,10 @@ class PresensiKelasController extends Controller
     }
 
     // mempresensi member yang tidak hadir (deposit tetap dipotong)
-    public function presensiAlpa(Request $request)
+    public function presensiAlpa(Request $request, $kelas, $member)
     {
-        $kelas = $request->input('ID_JADWAL_HARIAN');
-        $member = $request->input('ID_MEMBER');
+        // $kelas = $request->input('ID_JADWAL_HARIAN');
+        // $member = $request->input('ID_MEMBER');
 
         // mempresensi member
         $presensi = DB::table('presensi_member_kelas')

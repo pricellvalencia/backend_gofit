@@ -97,8 +97,8 @@ Route::get('/instruktur/{id_instruktur}', 'App\Http\Controllers\api\InstrukturCo
 
 Route::post('/presensi_kelas', 'App\Http\Controllers\api\PresensiKelasController@cekPresensiInstruktur');
 Route::get('/presensi_kelas/{id_jadwal_harian}','App\Http\Controllers\api\PresensiKelasController@listMember');
-Route::put('/presensi_kelas/hadir','App\Http\Controllers\api\PresensiKelasController@presensiHadir');
-Route::put('/presensi_kelas/alpa','App\Http\Controllers\api\PresensiKelasController@presensiAlpa');
+Route::put('/presensi_kelas/hadir/id_jadwal_harian/id_member','App\Http\Controllers\api\PresensiKelasController@presensiHadir');
+Route::put('/presensi_kelas/alpa/id_jadwal_harian/id_member','App\Http\Controllers\api\PresensiKelasController@presensiAlpa');
 
 Route::get('/ijin_instruktur/{id_instruktur}', 'App\Http\Controllers\api\IjinInstrukturController@getIjin');
 Route::get('/ijin_instruktur/getJadwal/{id_instruktur}', 'App\Http\Controllers\api\IjinInstrukturController@getJadwal');
