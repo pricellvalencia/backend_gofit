@@ -44,7 +44,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-header('Access-Control-Allow-Origin: http://localhost:9000');
+header('Access-Control-Allow-Origin: https://6485c2f3b6fff30edb2efd92--cosmic-brigadeiros-c39e73.netlify.app/');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Authorization, Origin, Accept');
 header('Access-Control-Allow-Credentials: true');
