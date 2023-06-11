@@ -213,7 +213,7 @@ class JadwalHarianTableSeeder extends Seeder
                 'ID_JADWAL_HARIAN' => 230,
                 'ID_JADWAL_DEFAULT' => 22,
                 'ID_INSTRUKTUR' => 3,
-                'STATUS_KELAS' => 'Dimulai',
+                'STATUS_KELAS' => 'Selesai',
                 'SISA_MEMBER_KELAS' => 0,
                 'TANGGAL' => '2023-06-11 15:30:00',
             ),

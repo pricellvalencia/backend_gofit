@@ -149,8 +149,7 @@ class LaporanController extends Controller
             ->join('jadwal_harian', 'presensi_member_kelas.ID_JADWAL_HARIAN', '=', 'jadwal_harian.ID_JADWAL_HARIAN')
             ->whereNotNull('presensi_member_kelas.WAKTU_PRESENSI_MEMBER_KELAS')
             ->whereYear('jadwal_harian.TANGGAL', $tahun)
-            ->whereMonth('jadwal_harian.TANGGAL', $bulan)
-            ->groupBy('presensi_member_kelas.ID_JADWAL_HARIAN');
+            ->whereMonth('jadwal_harian.TANGGAL', $bulan);
 
         $dataKelasInstruktur = $dataKelasInstruktur
             ->leftJoinSub($subQueryPeserta, 'sub_peserta', function ($join) {

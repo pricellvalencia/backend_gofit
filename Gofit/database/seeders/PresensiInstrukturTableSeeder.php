@@ -213,9 +213,9 @@ class PresensiInstrukturTableSeeder extends Seeder
                 'ID_PRESENSI_INSTRUKTUR' => '230',
                 'ID_INSTRUKTUR' => 3,
                 'WAKTU_MULAI_KELAS' => '2023-06-11 15:26:44',
-                'WAKTU_SELESAI_KELAS' => NULL,
-                'DURASI_KELAS' => NULL,
-                'KETERLAMBATAN' => NULL,
+                'WAKTU_SELESAI_KELAS' => '2023-06-11 16:30:00',
+                'DURASI_KELAS' => '3796',
+                'KETERLAMBATAN' => '1604',
             ),
         ));
         

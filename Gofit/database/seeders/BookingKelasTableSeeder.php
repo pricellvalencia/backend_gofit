@@ -265,7 +265,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '23.06.010',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:15:58',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             31 => 
             array (
@@ -273,7 +273,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '22.03.001',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:16:50',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             32 => 
             array (
@@ -281,7 +281,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '23.06.008',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:17:10',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             33 => 
             array (
@@ -289,7 +289,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '23.06.007',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:17:15',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             34 => 
             array (
@@ -297,7 +297,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '23.06.009',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:17:21',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             35 => 
             array (
@@ -305,7 +305,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '23.05.005',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:17:55',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             36 => 
             array (
@@ -313,7 +313,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '22.05.003',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:18:14',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
             37 => 
             array (
@@ -321,7 +321,7 @@ class BookingKelasTableSeeder extends Seeder
                 'ID_MEMBER' => '23.05.006',
                 'ID_JADWAL_HARIAN' => 230,
                 'TGL_BOOKING_KELAS' => '2023-06-11 14:18:27',
-                'STATUS_BOOKING_KELAS' => 'Booked',
+                'STATUS_BOOKING_KELAS' => 'Finish',
             ),
         ));
         
