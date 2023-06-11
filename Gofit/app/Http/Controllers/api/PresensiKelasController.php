@@ -55,7 +55,7 @@ class PresensiKelasController extends Controller
         if(is_null($presensi)) {
             return response([
                 'message' => 'Data tidak ditemukan'
-            ], 200);
+            ], 400);
         } else if($tanggal == date('Y-m-d')) {
             if($presensi->WAKTU_MULAI_KELAS != null) {
                 return response([
@@ -65,12 +65,12 @@ class PresensiKelasController extends Controller
             } else {
                 return response([
                     'message' => 'Anda belum dipresensi'
-                ], 400);
+                ], 402);
             }
         } else {
             return response([
                 'message' => 'Jadwal bukan jadwal hari ini'
-            ], 200);
+            ], 401);
         }
     }
 
