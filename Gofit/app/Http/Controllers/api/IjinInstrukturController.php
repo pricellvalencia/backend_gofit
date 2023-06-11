@@ -140,10 +140,12 @@ class IjinInstrukturController extends Controller
     
                 DB::table('jadwal_harian')
                     ->join('presensi_instruktur','jadwal_harian.ID_JADWAL_HARIAN','presensi_instruktur.ID_PRESENSI_INSTRUKTUR')
+                    ->join('jadwal_default','jadwal_harian.ID_JADWAL_DEFAULT','jadwal_default.ID_JADWAL_DEFAULT')
                     ->where('ID_JADWAL_HARIAN','=',$ijin_instruktur->ID_JADWAL_HARIAN)
                     ->update([
                         'jadwal_harian.ID_INSTRUKTUR' => $ijin_instruktur->ID_INSTRUKTUR_PENGGANTI,
                         'presensi_instruktur.ID_INSTRUKTUR' => $ijin_instruktur->ID_INSTRUKTUR_PENGGANTI,
+                        'jadwal_default.ID_INSTRUKTUR' => $ijin_instruktur->ID_INSTRUKTUR_PENGGANTI,
                     ]);
     
                 return response([
