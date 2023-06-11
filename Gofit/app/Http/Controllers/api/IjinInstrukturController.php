@@ -35,7 +35,7 @@ class IjinInstrukturController extends Controller
     public function getIjin($id_instruktur)
     {
         $ijin_instruktur = DB::table('ijin_instruktur')
-            ->join('instruktur','ijin_instruktur.ID_INSTRUKTUR_PENGGANTI','=','instruktur.ID_INSTRUKTUR')
+            ->leftJoin('instruktur','ijin_instruktur.ID_INSTRUKTUR_PENGGANTI','=','instruktur.ID_INSTRUKTUR')
             ->join('jadwal_harian','ijin_instruktur.ID_JADWAL_HARIAN','jadwal_harian.ID_JADWAL_HARIAN')
             ->join('jadwal_default','jadwal_harian.ID_JADWAL_DEFAULT','jadwal_default.ID_JADWAL_DEFAULT')
             ->join('kelas','jadwal_default.ID_KELAS','kelas.ID_KELAS')
