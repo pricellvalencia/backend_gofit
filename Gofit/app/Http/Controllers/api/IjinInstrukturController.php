@@ -99,22 +99,41 @@ class IjinInstrukturController extends Controller
             ], 400);
         }
 
-        $ijin = DB::table('ijin_instruktur')->insert([
-            'ID_IJIN_INSTRUKTUR' => $id_ijin_instruktur,
-            'ID_INSTRUKTUR' => $id_instruktur,
-            'TANGGAL_PEMBUATAN_IJIN' => $now,
-            'TANGGAL_IJIN' => $tgl_ijin,
-            'STATUS_IJIN' => $status_ijin,
-            'TGL_KONFIRMASI' => NULL,
-            'ID_JADWAL_HARIAN' => $id_jadwal->ID_JADWAL_HARIAN,
-            'KETERANGAN' => $keterangan,
-            'ID_INSTRUKTUR_PENGGANTI' => $pengganti,
-        ]);
-
-        return response([
-            'message' => 'Berhasil mengajukan ijin',
-            'data' => $ijin,
-        ], 200);
+        if($pengganti != null) {
+            $ijin = DB::table('ijin_instruktur')->insert([
+                'ID_IJIN_INSTRUKTUR' => $id_ijin_instruktur,
+                'ID_INSTRUKTUR' => $id_instruktur,
+                'TANGGAL_PEMBUATAN_IJIN' => $now,
+                'TANGGAL_IJIN' => $tgl_ijin,
+                'STATUS_IJIN' => $status_ijin,
+                'TGL_KONFIRMASI' => NULL,
+                'ID_JADWAL_HARIAN' => $id_jadwal->ID_JADWAL_HARIAN,
+                'KETERANGAN' => $keterangan,
+                'ID_INSTRUKTUR_PENGGANTI' => $pengganti,
+            ]);
+    
+            return response([
+                'message' => 'Berhasil mengajukan ijin',
+                'data' => $ijin,
+            ], 200);
+        } else {
+            $ijin = DB::table('ijin_instruktur')->insert([
+                'ID_IJIN_INSTRUKTUR' => $id_ijin_instruktur,
+                'ID_INSTRUKTUR' => $id_instruktur,
+                'TANGGAL_PEMBUATAN_IJIN' => $now,
+                'TANGGAL_IJIN' => $tgl_ijin,
+                'STATUS_IJIN' => $status_ijin,
+                'TGL_KONFIRMASI' => NULL,
+                'ID_JADWAL_HARIAN' => $id_jadwal->ID_JADWAL_HARIAN,
+                'KETERANGAN' => $keterangan,
+                'ID_INSTRUKTUR_PENGGANTI' => null,
+            ]);
+    
+            return response([
+                'message' => 'Berhasil mengajukan ijin',
+                'data' => $ijin,
+            ], 200);
+        }
     }
 
     // menu mo
