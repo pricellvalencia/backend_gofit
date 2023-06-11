@@ -22,7 +22,7 @@ class JadwalDefaultTableSeeder extends Seeder
             0 => 
             array (
                 'ID_JADWAL_DEFAULT' => 1,
-                'ID_INSTRUKTUR' => 2,
+                'ID_INSTRUKTUR' => 4,
                 'ID_KELAS' => 1,
                 'SESI_JADWAL_DEFAULT' => '17:00',
                 'HARI_JADWAL_DEFAULT' => 'Senin',
