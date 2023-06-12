@@ -44,7 +44,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-header('Access-Control-Allow-Origin: https://gofit-pricell.netlify.app');
+header('Access-Control-Allow-Origin: https://pricell-gofit.netlify.app');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Authorization, Origin, Accept');
 header('Access-Control-Allow-Credentials: true');
