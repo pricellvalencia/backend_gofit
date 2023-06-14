@@ -33,7 +33,7 @@ class BookingKelasController extends Controller
     // mengambil data jadwal kelas yang bisa dibooking
     public function getJadwal()
     {
-        $now = date('Y-m-d');
+        $now = date('Y-m-d H:i:s');
 
         $jadwal = DB::table('jadwal_harian')
             ->where('TANGGAL','>',$now)
