@@ -217,7 +217,7 @@ class MemberController extends Controller
     public function getPaketKelas($id_member) {
         $deposit_paket_kelas = DB::table('deposit_paket_kelas')
             ->join('kelas', 'deposit_paket_kelas.ID_KELAS', '=', 'kelas.ID_KELAS')
-            ->select('DEPOSIT_PAKET_KELAS.*', 'kelas.NAMA_KELAS', 'TGL_KADALUARSA')
+            ->select('DEPOSIT_PAKET_KELAS', 'NAMA_KELAS', 'TGL_KADALUARSA','ID_MEMBER')
             ->where('ID_MEMBER', '=', $id_member)
             ->get();
 
